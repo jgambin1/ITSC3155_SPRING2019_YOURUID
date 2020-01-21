@@ -12,6 +12,10 @@ end
 # Part II
 def max_2_sum arr
   # YOUR CODE HERE
+  total = 0;
+  total = arr.sort.last(2).sum;
+  return total;
+  
 end
 
 # Part III
