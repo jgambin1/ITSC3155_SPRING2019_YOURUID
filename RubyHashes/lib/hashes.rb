@@ -2,6 +2,14 @@
 # Part I
 def array_2_hash emails, contacts
     # YOUR CODE HERE
+    return contacts if emails.length == 0
+   
+    temp = contacts.keys
+    for x in 0..temp.length - 1
+        contacts[temp[x]] = emails[x]
+    end
+    
+    return contacts
 end
 
 # Part II
