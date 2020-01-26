@@ -15,9 +15,41 @@ end
 # Part II
 def array2d_2_hash contact_info, contacts
     # YOUR CODE HERE
+    contactsFinal = {}
+    x = 0
+    
+    return contacts if contact_info[0].length == 0
+    
+    
+    contacts.each do |key, value|
+        key2 = :"#{key}"
+        contactsFinal[key2] = {:email => contact_info[x][0], :phone => contact_info[x][1]}
+        
+        x+=1
+    end
+    return contactsFinal
+    
 end
 
 # Part III
 def hash_2_array contacts
     # YOUR CODE HERE
+    finalArray = []
+    emailArray = []
+    phoneArray = []
+    nameArray = []
+    
+    
+    contacts.each do |key, value|
+        key2 = :"#{key}"
+        
+        emailArray << contacts[key2][:email]
+        phoneArray << contacts[key2][:phone]
+        nameArray << "#{key}"
+    end
+    finalArray << emailArray
+    finalArray << phoneArray
+    finalArray << nameArray
+    
+    return finalArray
 end
