@@ -2,13 +2,26 @@
 
 # Part I
 def hello(name)
-
   return "Hello, ".concat(name)
 end
 
 # Part II
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  if s.empty?
+    return false
+  end
+  
+  if (s[-1] == 'A' || s[-1] == "E" || s[-1] == "I" || s[-1] == "O" || s[-1] == "U")
+    return false
+  end 
+  
+  if /^[^aeiou\W]/i.match(s) == nil
+    return false
+  else
+    return true
+  end
+  
+return true
 end
 
 # Part III
