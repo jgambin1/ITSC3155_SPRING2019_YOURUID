@@ -27,13 +27,10 @@ end
 # Part III
 def binary_multiple_of_4? s
   # YOUR CODE HERE
-  if (s) == "0"
-    return true
-  end
-  
-  if /^[01]*(00)$/.match(s)|| /^0$/.match(s)
-    return true
-  else
+  if /[^01]+/.match(s) || s ==""
     return false
-  end
-end
+  end 
+  if s.to_i(2) % 4 == 0
+    return true
+  end 
+end 
