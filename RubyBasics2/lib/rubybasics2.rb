@@ -2,7 +2,8 @@
 
 # Part I
 def hello(name)
-  # YOUR CODE HERE
+
+  return "Hello, ".concat(name)
 end
 
 # Part II
