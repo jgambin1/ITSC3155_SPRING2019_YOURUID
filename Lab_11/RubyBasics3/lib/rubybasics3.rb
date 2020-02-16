@@ -5,6 +5,7 @@ class BookInStock
     attr_reader :isbn, :price
     attr_writer :isbn, :price
     def initialize(isbn, price)
+        raise ArgumentError if isbn.empty? || price <= 0
         @isbn = isbn
         @price = price
     end
