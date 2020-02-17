@@ -37,10 +37,6 @@ class JellyBean < Dessert
   end
   
   def delicious?
-		if flavor =~ /black licorice/i
-			return false
-		else
-			return true
-		end
+		@flavor != "licorice"
   end
 end
